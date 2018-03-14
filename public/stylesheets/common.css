@@ -1,0 +1,425 @@
+﻿@font-face {
+    font-family: 'DS-Digital';
+    src: url('/fonts/DS-Digital.ttf.woff') format('woff'), url('/fonts/DS-Digital.ttf.svg#DS-Digital') format('svg'), url('/fonts/DS-Digital.ttf.eot'), url('/fonts/DS-Digital.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: "Rounded Mplus 1c","ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+    color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    background: radial-gradient(rgb(20,20,30), rgb(0,0,0)) fixed;
+}
+
+body>* {
+    width: 100%;
+}
+
+a {
+    color: #333333;
+}
+
+header {
+    background-color: rgba(0,0,0,0.8);
+}
+
+header a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+h1 span {
+    color: lightblue;
+}
+
+h2 {
+    border-bottom: 1px dashed lightgray;
+    margin-bottom: 5px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+footer {
+    background-color: rgba(0,0,0,0.8);
+    padding: 5px 10px;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer a {
+    color: lightgray;
+}
+
+#he-counter {
+    font-family: 'DS-Digital';
+    font-size: 500%;
+    letter-spacing: 0.2em;
+    text-align: right;
+    background: linear-gradient(to bottom right,#333333,#111111);
+    color: lightblue;
+    margin: 10px;
+    padding: 10px;
+}
+
+#he-button {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border: none;
+    color: #333333;
+    box-shadow: 0 0 10px;
+    background: url("/images/button.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    font-size: 200%;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px white;
+    transition: color 100ms linear;
+}
+
+#he-button:hover {
+    color: yellow;
+}
+
+#kiriban {
+    color: red;
+    font-weight: bold;
+    visibility: hidden;
+    animation: blink 500ms linear infinite;
+}
+
+#others {
+    margin-top: 20px;
+}
+
+#others .other-button {
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    background-color: lightgray;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+#decoration-container {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+}
+
+#bg {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,0,100,0);
+    animation: flash 1s linear infinite;
+}
+
+#stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    transition: animation-duration linear 1s;
+    animation: rotate 86400s linear infinite;
+}
+
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+    animation: rotate 86400s linear infinite;
+}
+
+.discoball-container {
+    position: absolute;
+    top: 40%;
+    width: 263px;
+    height: 247px;
+}
+
+.discoball-container div {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.discoball-container.left {
+    left: 10px;
+}
+
+.discoball-container.right {
+    right: 10px;
+}
+
+.silver {
+    background-image: url('/images/disco-ball-silver.gif');
+}
+
+.purple {
+    background-image: url('/images/disco-ball-purple.gif');
+}
+
+.gold {
+    background-image: url('/images/disco-ball-gold.gif');
+}
+
+.light {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4000px 200px 0 200px;
+    border-color: lightblue transparent transparent;
+    transform-origin: center bottom;
+    animation: pan 20s linear infinite;
+}
+
+.light.left {
+    left: 0;
+}
+
+.light.right {
+    right: 0;
+}
+
+img[class^="audience"] {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    animation: jump 1000ms ease-out infinite;
+}
+
+img.audience2 {
+    animation-delay: 200ms;
+}
+
+.banner {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1 {
+    width: 100%;
+    font-size: 2em;
+    letter-spacing: 2em;
+    margin-right: -2em;
+}
+
+.banner p {
+    margin: 20px 0;
+}
+
+.banner form {
+    margin-top: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner form input {
+    height: 40px;
+    padding: 5px;
+}
+
+.banner form input[type="text"] {
+    border-radius: 5px 0 0 5px;
+    border: 1px solid gray;
+}
+
+.banner form input[type="submit"] {
+    border-radius: 0 5px 5px 0;
+    border: 1px solid gray;
+    background-color: lightblue;
+    transition: background-color linear 200ms;
+}
+
+.banner form input[type="submit"]:hover {
+    background-color: white;
+}
+
+.share-button-container {
+    width: 100%;
+    text-align: right;
+    opacity: 0.5;
+    transition: opacity linear 200ms;
+}
+
+.share-button-container:hover {
+    opacity: 1;
+}
+
+.share-button-container > * {
+    margin: 0 5px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+    text-shadow: 0 0 10px #919191;
+    text-align: center;
+    transition: height linear 500ms;
+}
+
+.container::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url('/images/bg.jpg') no-repeat center;
+    background-size: cover;
+    opacity: 0.4;
+}
+
+.container p {
+    margin: 10px;
+}
+
+.digital {
+    font-family: 'DS-Digital';
+    font-size: 140%;
+    margin-right: 5px;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.table {
+    table-layout: fixed;
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    border-spacing: 0;
+}
+
+.table th, .table td {
+    padding: 5px;
+}
+
+.table td {
+    border-top: 1px solid lightgray;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@keyframes flash {
+    0% {
+        background-color: rgba(255,0,100,0);
+    }
+    50% {
+        background-color: rgba(255,0,100,0.5);
+    }
+    100% {
+        background-color: rgba(255,0,100,0);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pan {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

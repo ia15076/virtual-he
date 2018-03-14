@@ -1,0 +1,18 @@
+{
+  "name": "virtual-he",
+  "version": "0.0.0",
+  "description": "virtual-he",
+  "main": "server.js",
+  "author": {
+    "name": "ia15076"
+  },
+  "dependencies": {
+    "koa": "^2.5.0",
+    "koa-body": "^2.5.0",
+    "koa-pug": "^3.0.0-2",
+    "koa-route": "^3.2.0",
+    "koa-socket-2": "^1.0.17",
+    "koa-static": "^4.0.2",
+    "nanoid": "^1.0.2"
+  }
+}

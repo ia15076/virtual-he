@@ -1,0 +1,47 @@
+﻿doctype html
+html
+    head
+        block head
+            meta(charset="utf-8")
+            title バーチャルへぇ
+            link(rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css")
+            link(rel="stylesheet" href="/stylesheets/common.css")
+            link(rel="shortcut icon" href="/favicon.ico")
+    body
+        #decoration-container
+            #bg
+            #stars
+                - for (var i = 0; i < 1000; i++)
+                    - var top = Math.random() * 284 - 142;
+                    - var left = Math.random() * 284 - 142;
+                    .star(style="top:"+top+"%;left:"+left+"%;" )
+            .light.left
+            .light.right
+            img.audience2(src="/images/audience2.png")
+            img.audience1(src="/images/audience1.png")
+            .discoball-container.right
+                .silver
+                .purple
+                .gold
+            .discoball-container.left
+                .silver
+                .purple
+                .gold
+        header
+            block header
+                a(href="/")
+                    h1 バーチャル
+                        span へぇ
+        main
+            block main
+        footer
+            block footer
+                small (c)2018 福ちゃん
+                address
+                    a(href="https://twitter.com/m_fukuchan") @m_fukuchan
+        block script
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js")
+            script(src="https://platform.twitter.com/widgets.js")
+            script(src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js")
+            script(src="/javascripts/common.js")

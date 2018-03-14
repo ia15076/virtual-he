@@ -1,0 +1,35 @@
+﻿extends _layout.pug
+block header
+    .banner
+        h1 バーチャル
+            span へぇ
+        p みんなで「へぇ」できるWebサービス
+        form(action="/" method="post")
+            input(type="text" name="title" maxlength="100" placeholder="ルーム名" required)
+            input(type="submit" value="今すぐ始める")
+block main
+    .container
+        h2 バーチャルへぇ #とは
+        p みんなで「へぇ」を連打できるWebサービスです。「へぇ」と思った、そんなときに。
+        .share-button-container
+            a.twitter-share-button(href="https://twitter.com/share?ref_src=twsrc%5Etfw") Tweet
+            .line-it-button(data-type="share-a")
+        h2 現在稼働中のルーム
+        - var keys = Object.keys(rooms)
+        if (keys.length > 0)
+            table.table
+                tr
+                    th ルーム名
+                    th へぇ
+                    th 参加人数
+                - for (var i = 1; i <= keys.length; i++)
+                    - var room = rooms[keys[keys.length - i]]
+                    if (i > 20)
+                        - break
+                    tr
+                        td
+                            a(href="/" + keys[keys.length - i] ) #{room.title}
+                        td.digital #{room.count}
+                        td #{room.viewer}
+        else
+            p 稼働中のルームはありません

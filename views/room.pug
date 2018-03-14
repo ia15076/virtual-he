@@ -1,0 +1,24 @@
+﻿extends _layout.pug
+block main
+    audio.he-sound(preload="auto")
+        source(src="/sounds/he_e4.mp3" type="audio/mp3")
+    audio.he-sound(preload="auto")
+        source(src="/sounds/he_e4.mp3" type="audio/mp3")
+    .container
+        h2 #{room.title}
+        .share-button-container
+            a.twitter-share-button(href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-text="[バーチャルへぇ] " + room.title) Tweet
+            .line-it-button(data-type="share-a")
+        #he-counter #{room.count}
+        button#he-button へぇ
+        p#kiriban KIRIBAN
+        h3 他の参加者
+        .flex#others
+            - for (var i = 0; i < room.viewer; i++)
+                .other-button
+        p
+            span#viewer-counter #{room.viewer}
+            | 人
+append script
+    script(src="/javascripts/button.js")
+    script socket.emit("join", "#{connection}");
