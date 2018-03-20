@@ -89,6 +89,10 @@ footer a {
     color: #222222;
 }
 
+#steps img {
+    border: 1px solid gray;
+}
+
 #he-counter {
     font-family: 'Nova Mono', monospace;
     font-size: 500%;
