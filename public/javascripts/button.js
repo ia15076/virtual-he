@@ -54,9 +54,7 @@ $('#he-button').on('click', function () {
     updateCounter(count);
     updateBackground(count);
 
-    setTimeout(function () {
-        window.navigator.vibrate(500);
-    },100);
+    window.navigator.vibrate(500);
 });
 
 socket.on('join', function (num) {
