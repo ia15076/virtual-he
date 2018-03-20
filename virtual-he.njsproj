@@ -31,6 +31,7 @@
     <Compile Include="public\javascripts\button.js" />
     <Compile Include="public\javascripts\common.js" />
     <Compile Include="server.js" />
+    <Content Include=".gitignore" />
     <Content Include="package.json" />
     <Content Include="public\favicon.ico" />
     <Content Include="public\fonts\DS-Digital.ttf.eot" />
