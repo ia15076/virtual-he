@@ -34,7 +34,7 @@ const routes = {
         if (rooms[connection]) {
             ctx.render('room', { 'room': rooms[connection] ,'connection': connection });
         } else {
-            ctx.throw(404);
+            ctx.render('room_not_found');
         }
     },
 

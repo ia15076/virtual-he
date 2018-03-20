@@ -50,6 +50,7 @@
     <Content Include="README.md" />
     <Content Include="views\home.pug" />
     <Content Include="views\room.pug" />
+    <Content Include="views\room_not_found.pug" />
     <Content Include="views\_layout.pug" />
   </ItemGroup>
   <ItemGroup>
