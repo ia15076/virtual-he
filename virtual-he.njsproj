@@ -41,6 +41,10 @@
     <Content Include="public\images\disco-ball-silver.gif" />
     <Content Include="public\images\disco-ball-gold.gif" />
     <Content Include="public\images\disco-ball-purple.gif" />
+    <Content Include="public\images\he.svg" />
+    <Content Include="public\images\step1_1.png" />
+    <Content Include="public\images\step1_2.png" />
+    <Content Include="public\images\step2.png" />
     <Content Include="public\robots.txt" />
     <Content Include="public\sounds\he_e4.mp3" />
     <Content Include="public\sounds\he_e4.wav" />

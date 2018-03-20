@@ -11,6 +11,19 @@ block main
     .container
         h2 バーチャルへぇ #とは
         p みんなで「へぇ」を連打できるWebサービスです。「へぇ」と思った、そんなときに。
+        #steps.flex
+            div
+                img(alt="ステップ1(自分でルームを作成)" src="/images/step1_1.png")
+                h3 まずは、ルームを作成しましょう！
+                p ページ上部のフォームでルーム名を入力して始めます。
+            div
+                img(alt="ステップ1(他のルームに参加)" src="/images/step1_2.png")
+                h3 または、既存の他のルームに参加しましょう！
+                p 下の「現在稼働中のルーム」から適当に選んで参加してみましょう。
+            div
+                img(alt="ステップ2" src="/images/step2.png")
+                h3 ルームに入れたら、思いのままにボタンを押しましょう！
+                p 自分や他の参加者がボタンを押すたびに「へぇ」と音が鳴るので、音量に注意してください。
         .share-button-container
             a.twitter-share-button(href="https://twitter.com/share?ref_src=twsrc%5Etfw") Tweet
             .line-it-button(data-type="share-a")

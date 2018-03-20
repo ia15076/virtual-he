@@ -66,10 +66,34 @@ footer a {
     color: lightgray;
 }
 
+#preload {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 999;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#preload #he {
+    color: lightblue;
+    font-size: 400%;
+    font-weight: bold;
+    animation: rotate 2s linear infinite;
+}
+
+#preload #loading {
+    color: #222222;
+}
+
 #he-counter {
     font-family: 'Nova Mono', monospace;
     font-size: 500%;
     letter-spacing: 0.2em;
+    word-break: break-all;
     text-align: right;
     background: linear-gradient(to bottom right,#333333,#111111);
     color: lightblue;
