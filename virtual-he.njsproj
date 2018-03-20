@@ -34,9 +34,6 @@
     <Content Include=".gitignore" />
     <Content Include="package.json" />
     <Content Include="public\favicon.ico" />
-    <Content Include="public\fonts\DS-Digital.ttf.eot" />
-    <Content Include="public\fonts\DS-Digital.ttf.svg" />
-    <Content Include="public\fonts\DS-Digital.ttf.woff" />
     <Content Include="public\images\audience1.png" />
     <Content Include="public\images\audience2.png" />
     <Content Include="public\images\bg.jpg" />
@@ -58,7 +55,6 @@
   <ItemGroup>
     <Folder Include="public\" />
     <Folder Include="public\javascripts\" />
-    <Folder Include="public\fonts\" />
     <Folder Include="public\sounds\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="public\images\" />
