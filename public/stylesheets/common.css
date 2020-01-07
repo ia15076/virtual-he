@@ -12,7 +12,7 @@ html {
 body {
     width: 100%;
     min-height: 100%;
-    font-family: "Rounded Mplus 1c","ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+    font-family: "Rounded Mplus 1c","ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO", sans-serif;
     color: white;
     display: flex;
     flex-flow: column nowrap;
@@ -241,7 +241,7 @@ img[class^="audience"] {
     display: none;
     position: absolute;
     width: 100%;
-    bottom: 0px;
+    bottom: 0;
     animation: jump 1000ms ease-out infinite;
 }
 

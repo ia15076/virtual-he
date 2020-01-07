@@ -14,7 +14,7 @@ block main
         p#kiriban KIRIBAN
         h3 他の参加者
         .flex#others
-            - for (var i = 0; i < room.viewer; i++)
+            - for (let i = 0; i < room.viewer; i++)
                 .other-button
         p
             span#viewer-counter #{room.viewer}

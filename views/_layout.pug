@@ -19,9 +19,9 @@ html
         #decoration-container
             #bg
             #stars
-                - for (var i = 0; i < 1000; i++)
-                    - var top = Math.random() * 284 - 142;
-                    - var left = Math.random() * 284 - 142;
+                - for (let i = 0; i < 1000; i++)
+                    - const top = Math.random() * 284 - 142;
+                    - const left = Math.random() * 284 - 142;
                     .star(style="top:"+top+"%;left:"+left+"%;" )
             .light.left
             .light.right
